@@ -61,27 +61,60 @@
 // console.log(`Het gemiddelde van de getal is: ${gemiddelde} `);
 // console.log(`De mediaan is ${mediaan}`);
 
-// Oefening 4:
-let invoer = null;
-const groenten = [];
-const fruit = [];
-do {
-  invoer = prompt(
-    "Geef een fruit of groente in, of druk op enter om te stoppen: "
-  );
-  if (invoer === null) {
-    continue;
-  }
-  const split = invoer.split(" ");
+// Oefening 4 + 5:
+// let invoer = null;
+// const groenten = [];
+// const fruit = [];
+// do {
+//   invoer = prompt(
+//     "Geef een fruit of groente in, of druk op enter om te stoppen: ");
+//   if (invoer === null)
+//   {
+//     continue;
+//   }
+//   const split = invoer.split(" ");
 
-  if (split[0] === "g" && split.length === 2) {
-    groenten.push(split[1]);
-  }
+//   if (split[0] === "g" && split.length === 2 && !groenten.includes(split[1])) {
+//     groenten.push(split[1]);
+//   }
 
-  if (split[0] === "f" && split.length === 2) {
-    fruit.push(split[1]);
-  }
-} while (invoer !== null);
+//   if (split[0] === "f" && split.length === 2 && !fruit.includes(split[1])) {
+//     fruit.push(split[1]);
+//   }
+// } while (invoer !== null);
 
-console.log(groenten);
-console.log(fruit);
+// console.log(groenten);
+// console.log(fruit);
+
+// Oefening 6:
+// const Array1 = [1, 2, 3, 4, 5];
+// const Array2 = [4, 5, 6, 7, 8];
+
+// // Oplossing met sets
+// function SetCheck(arr1,arr2) {
+//   const set1 = new Set(arr1)
+//   const set2 = new Set(arr2)
+//   const samenkomst = new Set()
+//   for (const element of set1)
+//   {
+//     if (set2.has(element)) {
+//       samenkomst.add(element)
+//     }
+//   }
+//   return samenkomst
+
+// }
+// const uitvoer = SetCheck(Array1,Array2)
+// console.log(uitvoer)
+
+// Oplossing met arrays
+// function ArrayCheck() {
+//   Array1.forEach((element) => {
+//     if (Array2.includes(element)) {
+//       gsArray.push(element);
+//     }
+//   });
+// }
+
+// ArrayCheck();
+// console.log(gsArray);
