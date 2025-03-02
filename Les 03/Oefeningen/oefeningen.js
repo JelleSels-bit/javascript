@@ -274,5 +274,108 @@
 //   console.log(`je geboorte datum is: ${dag}/${maand}/${jaar}`);
 //   console.log(`vandaag is het ${vandaag}`)
 //   console.log(`je bent ${resultaat} dagen oud.` )
-  
+
+// }
+// // Oefening 7
+// {
+//     function getCharacterFrequency(str) {
+//         const Frequency = {};
+//
+//         for (let char of str) {
+//             Frequency[char] = (Frequency[char] || 0) + 1;
+//         }
+//         return Frequency;
+//     }
+//
+//     let Text = prompt('Geef een tekst in:', "test");
+//     console.log(getCharacterFrequency(Text));
+//
+// }
+
+// Oefening 8:
+// {
+//     const data = {
+//         books: [
+//             {
+//                 title: 'The Hobbit',
+//                 author: 'J.R.R. Tolkien',
+//                 published: 1937,
+//                 wordCount: 95356,
+//                 genres: ['Fantasy', 'Adventure'],
+//             },
+//             {
+//                 title: '1984',
+//                 author: 'George Orwell',
+//                 published: 1949,
+//                 wordCount: 88900,
+//                 genres: ['Dystopian', 'Political Fiction'],
+//             },
+//             {
+//                 title: 'Pride and Prejudice',
+//                 author: 'Jane Austen',
+//                 published: 1813,
+//                 wordCount: 124713,
+//                 genres: ['Romance', 'Regency Romance'],
+//             },
+//             {
+//                 title: 'War and Peace',
+//                 author: 'Leo Tolstoy',
+//                 published: 1867,
+//                 wordCount: 544406,
+//                 genres: ['Historical Fiction'],
+//             },
+//             {
+//                 title: 'The Tell-Tale Heart',
+//                 author: 'Edgar Allan Poe',
+//                 published: 1843,
+//                 wordCount: 2093,
+//                 genres: ['Gothic Fiction'],
+//             },
+//             {
+//                 title: 'The Metamorphosis',
+//                 author: 'Franz Kafka',
+//                 published: 1915,
+//                 wordCount: 22185,
+//                 genres: ['Absurdist Fiction'],
+//             },
+//             {
+//                 title: 'Strange Case of Dr Jekyll and Mr Hyde',
+//                 author: 'Robert Louis Stevenson',
+//                 published: 1886,
+//                 wordCount: 13500,
+//                 genres: ['Gothic Fiction', 'Mystery'],
+//             }
+//         ],
+//         authors: [
+//             'J.R.R. Tolkien',
+//             'George Orwell',
+//             'Jane Austen',
+//             'Leo Tolstoy',
+//             'Edgar Allan Poe',
+//             'Franz Kafka',
+//             'Robert Louis Stevenson',
+//         ]
+//     }
+//
+//     function getValueByPath(arr, obj) {
+//
+//         for (let key of arr) {
+//             obj = obj[key]
+//         }
+//         return obj
+//
+//         // let obj = data;
+//         // obj = obj["books"];
+//         // obj = obj[0];
+//         // obj = obj["genres"];
+//         // obj = obj[1];
+//
+//     }
+//
+//     console.log(getValueByPath(['books', 0, 'genres'], data))
+//     console.log(getValueByPath(['books', 0, 'title'], data))
+//     console.log(getValueByPath(['authors', 2], data))
+//     console.log(getValueByPath(['books', 1, 'genres', 0], data))
+//
+//
 // }
