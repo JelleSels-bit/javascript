@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Voorbeeld 8 | Les 4 | JavaScript (Essentials)</title>
+</head>
+<body>
+
+<h1>Voorbeeld 8: Events koppelen</h1>
+
+<!-- Als je slechts één lijn JS Code wilt koppelen aan een event kan je een inline event handler gebruiken. -->
+<button onclick="alert('Hello world!')">Show alert</button>
+
+<!-- Als je meerdere lijnen JS Code wilt koppelen aan een event, gebruik je een functie. -->
+<button onclick="showAlert()">Call alert function</button>
+
+<button id="third-button">Call alert function, via addEventListener</button>
+<script>
+  function showAlert() {
+    console.log('The showAlert function has been called')
+    alert('Hello world!')
+  }
+
+  const thirdButton = document.getElementById('third-button')
+  thirdButton.addEventListener('click', showAlert)
+</script>
+
+
+</body>
+</html>

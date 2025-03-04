@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Voorbeeld 6 | Les 4 | JavaScript (Essentials)</title>
+</head>
+<body>
+
+<h1>Voorbeeld 6: Lijst opbouwen via JavaScript</h1>
+
+<div id="result-container">
+</div>
+
+<script>
+  // Haal de container op waarin we de nieuwe elementen willen plaatsen.
+  const resultContainer = document.getElementById('result-container')
+
+  // Maak een nieuw ul element aan.
+  const list = document.createElement('ul')
+
+  // Voeg nieuwe li elementen toe aan de ul.
+  const fruit = ['Apple', 'Pear', 'Banana', 'Strawberry', 'Pineapple']
+  fruit.forEach(fruit => list.appendChild(generateListItem(fruit)))
+
+  // Voeg de ul toe aan de container.
+  resultContainer.appendChild(list)
+
+  /**
+   * Genereer een nieuw li element met de gegeven tekst.
+   * @param text De tekst die in het list item moet komen.
+   * @return {Element} Het nieuw aangemaakte list item.
+   */
+  function generateListItem(text) {
+    const newListItem = document.createElement('li')
+    const newText = document.createTextNode(text)
+
+    newListItem.appendChild(newText)
+    resultContainer.appendChild(newListItem)
+
+    return newListItem
+  }
+</script>
+
+</body>
+</html>

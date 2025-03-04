@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Voorbeeld 9 | Les 4 | JavaScript (Essentials)</title>
+</head>
+<body>
+
+<h1>Voorbeeld 9: onchange</h1>
+
+<input type="text" id="text-input" onchange="changeCounter()">
+<!--<input type="text" id="text-input" oninput="changeCounter()">-->
+<p id="resultaat"></p>
+
+<script>
+  const textInput = document.getElementById('text-input')
+  const resultaat = document.getElementById('resultaat')
+  let counter = 0
+
+  function changeCounter(evt) {
+    console.log(evt.target.value)
+    // const newValue = textInput.value
+    const newValue = evt.currentTarget.value
+    counter++
+    resultaat.textContent = `The text input has changed ${counter} times. The new value is: ${newValue}`
+  }
+
+  TextInput.addEventListener('input', changeCounter)
+</script>
+
+</body>
+</html>

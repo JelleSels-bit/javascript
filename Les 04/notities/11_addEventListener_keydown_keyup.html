@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Voorbeeld 11 | Les 4 | JavaScript (Essentials)</title>
+</head>
+<body>
+
+<h1>Voorbeeld 11: addEventListener &amp; onkeydown</h1>
+
+<h4>Ingedrukte toetsen:</h4>
+
+<div id="result"></div>
+
+<script>
+  const result = document.getElementById('result')
+
+  document.addEventListener('keydown', (evt) => {
+    result.textContent += evt.key
+  })
+
+  document.addEventListener('keyup', () => result.textContent += ' ')
+</script>
+
+</body>
+</html>

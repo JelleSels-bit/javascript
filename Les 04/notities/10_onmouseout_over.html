@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Voorbeeld 10 | Les 4 | JavaScript (Essentials)</title>
+</head>
+<style>
+  #resultaat {
+    margin-top: 20px;
+    padding: 5rem;
+    border: 1px solid black;
+  }
+</style>
+<body>
+
+<h1>Voorbeeld 10: onmouseover &amp; onmouseout</h1>
+
+<div id="resultaat" onmouseover="mouseOverHandler()" onmouseout="mouseOutHandler()"></div>
+
+<script>
+  const resultaat = document.getElementById('resultaat')
+
+  function mouseOverHandler() {
+    resultaat.innerHTML = "The cursor currently is <strong>inside</strong> the rectangle."
+  }
+
+  function mouseOutHandler() {
+    resultaat.innerHTML = "The cursor currently is <strong>outside</strong> the rectangle."
+  }
+</script>
+
+</body>
+</html>

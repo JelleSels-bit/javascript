@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Voorbeeld 3 | Les 4 | JavaScript (Essentials)</title>
+</head>
+<body>
+
+<h1>Voorbeeld 3: HTML elementen vinden</h1>
+
+<h2 id="list-title"></h2>
+
+<ul>
+  <li>Programming essentials</li>
+  <li>Database essentials</li>
+  <li class="js-leerlijn">Websites</li>
+  <li>Object oriented programming</li>
+  <li>IT Challenges 1</li>
+  <li>Exploring IT Professional</li>
+  <li class="js-leerlijn">JavaScript</li>
+</ul>
+
+<script>
+  // Haal een specifiek element op uit de DOM.
+  // Het resultaat is een HTML-element waar je alle attributen en methodes van een HTML element op kunt oproepen.
+  const title = document.getElementById('list-title')
+
+  // InnerHTML is een attribuut waarmee de HTML-inhoud van een element ingesteld/uitgelezen kan worden.
+  // Deze property accepteert tekst en een HTML-string (dus inclusief tags).
+  title.innerHTML = 'Opleidingsonderdelen'
+
+  // Haal alle elementen op die het gegeven tag gebruiken.
+  // De methode geeft een HTMLCollection terug, dit is een array-achtig object waar methodes zoals map, filter en reduce
+  // niet op werken.
+  // Een HTMLCollection is ook live, als de DOM aangepast wordt en er een element bij komt, wordt de HTMLCollection
+  // uitgebreid, als er een element verwijderd wordt, wordt de HTMLCollection ingekort.
+  // Dit werkt natuurlijk ook voor updates.
+  const courses = document.getElementsByTagName('li')
+  console.log(courses)
+
+  // Haal alle elementen op die de gegeven class gebruiken.
+  // Geeft ook een HTMLCollection terug.
+  const jsCourses = document.getElementsByClassName('js-leerlijn')
+  // Haal het eerste JS-vak op en geef het een gele achtergrondkleur.
+  // Via setAttribute kan je alle bekende HTML-attributen toevoegen aan het element.
+  jsCourses[0].setAttribute('style', 'background-color: #F7E018;')
+
+  // Via querySelectorAll kan je alle elementen ophalen die voldoen aan de gegeven selector.
+  // Er bestaat ook een querySelector functie, die geeft enkel het eerste element terug dat voldoet aan de gegeven
+  // selector.
+  // const evenRows = document.querySelectorAll('li[hidden=true]');
+  const evenRows = document.querySelectorAll('li:nth-child(even)')
+  evenRows.forEach(row => row.setAttribute('style', 'background-color: #F0F0F0;'))
+</script>
+
+</body>
+</html>

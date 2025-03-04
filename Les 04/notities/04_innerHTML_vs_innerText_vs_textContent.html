@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Voorbeeld 4 | Les 4 | JavaScript (Essentials)</title>
+</head>
+<body>
+
+<h1>Voorbeeld 4: <i>innerHTML</i> vs <i>innerText</i> vs <i>textContent</i></h1>
+
+<div id="inhtml">
+  <span>Hello <span style="display: none;">World</span></span>
+</div>
+<div id="intxt">
+  <span>Hello <span style="display: none;">World</span></span>
+</div>
+<div id="txtcont">
+  <span>Hello <span style="display: none;">World</span></span>
+</div>
+
+<script>
+  const innerHTMLElement = document.getElementById('inhtml')
+  console.log(innerHTMLElement.innerHTML)
+
+  const innerTextElement = document.getElementById('intxt')
+  console.log(innerTextElement.innerText)
+
+  const txtContentElement = document.getElementById('txtcont')
+  console.log(document.getElementById('txtcont').textContent)
+
+  /*
+  document.querySelector("#inhtml").innerHTML = "<strong>Kom ik vet op het scherm?</strong>";
+  document.querySelector("#intxt").innerText = "<strong>Kom ik vet op het scherm?</strong>";
+  document.querySelector("#txtcont").textContent = "<strong>Kom ik vet op het scherm?</strong>";
+  */
+</script>
+
+</body>
+</html>

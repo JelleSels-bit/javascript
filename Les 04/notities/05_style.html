@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Voorbeeld 5 | Les 4 | JavaScript (Essentials)</title>
+  <style>
+      .paragraph-styling {
+          color: darkred;
+
+      }
+  </style>
+</head>
+<body>
+
+<h1>Voorbeeld 5: Stijl aanpassen</h1>
+
+<p id="p1">Hello World!</p>
+<p id="p2">Hello World!</p>
+
+<script>
+  const paragraph2 = document.getElementById('p2')
+  const paragraphs = document.getElementsByTagName('p')
+
+  for (const paragraph of paragraphs) {
+    paragraph.removeAttribute('hidden')
+    paragraph.className = 'paragraph-styling'
+    if (paragraph.hasAttribute('data-size')) {
+      paragraph.style.fontSize = `${paragraph.getAttribute('data-size')
+  }
+  paragraph2.style.color = 'darkred'
+  paragraph2.style.fontFamily = 'Verdana'
+  paragraph2.style.fontSize = '60pt'
+</script>
+
+</body>
+</html>

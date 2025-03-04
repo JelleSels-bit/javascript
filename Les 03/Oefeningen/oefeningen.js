@@ -129,50 +129,51 @@
 // }
 // Oefening 4:
 {
-  const object1 = {
-    a: 1,
-    b: 2,
-    c: 3,
-  };
+    const object1 = {
+        a: 1,
+        b: 2,
+        c: 3,
+    };
 
-  const object2 = {
-    b: 4,
-    c: 5,
-    d: 6,
-  };
+    const object2 = {
+        b: 4,
+        c: 5,
+        d: 6,
+    };
 
-  function mergeObjects(één, twee) {
-    const result = {};
+    function mergeObjects(één, twee) {
+        const result = {};
 
-    for (let key of Object.keys(één)) {
-      if (twee[key]) {
-        console.log(`Key ${Object.keys(één)} exists for both objects.`);
-        console.log(`Current values:`);
-        console.log(`1: ${één[key]}`);
-        console.log(`2: ${twee[key]}`);
-        const userInput = Number(
-          prompt(
-            `Wich object shall I use to set the value of the result [1/2]?`,
-            1
-          )
-        );
-        if (userInput === 1) {
-          result[key] = één[key];
-        } else if (userInput === 2) {
-          result[key] = twee[key];
-        } else {
-          return console.log(`Je mag enkel 1 & 2 ingeven`);
+        for (let key of Object.keys(één)) {
+            if (twee[key]) {
+                console.log(`Key ${Object.keys(één)} exists for both objects.`);
+                console.log(`Current values:`);
+                console.log(`1: ${één[key]}`);
+                console.log(`2: ${twee[key]}`);
+                const userInput = Number(
+                    prompt(
+                        `Wich object shall I use to set the value of the result [1/2]?`,
+                        1
+                    )
+                );
+                if (userInput === 1) {
+                    result[key] = één[key];
+                } else if (userInput === 2) {
+                    result[key] = twee[key];
+                } else {
+                    return console.log(`Je mag enkel 1 & 2 ingeven`);
+                }
+            } else {
+                result[key] = één[key];
+            }
         }
-      } else {
-        result[key] = één[key];
-      }
+        for (let key2 of Object.keys(twee)) {
+            if (!result[key2]) {
+                result[key2] = twee[key2];
+            }
+        }
+        return result;
     }
-    for (let key2 of Object.keys(twee)) {
-      if (!result[key2]) {
-        result[key2] = twee[key2];
-      }
-    }
-    return result;
-  }
-  console.log(mergeObjects(object1, object2));
+
+    console.log(mergeObjects(object1, object2));
 }
